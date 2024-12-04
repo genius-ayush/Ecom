@@ -9,7 +9,11 @@ This project is a simplified E-commerce platform that assigns users an IPL team 
 
 
 
-https://github.com/user-attachments/assets/628598f2-8365-4262-b675-1057518ba8ad
+
+
+
+
+https://github.com/user-attachments/assets/cf274760-2325-438a-8d2c-ea58350ab143
 
 
 ---
