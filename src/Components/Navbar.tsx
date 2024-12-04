@@ -34,7 +34,7 @@ function Navbar() {
   }, [token]);
 
   return (
-    <div className="sticky top-0 z-10 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30  firefox:bg-opacity-90">
+    <div className="sticky top-0 z-10 shadow-xl bg-white backdrop-filter backdrop-blur-lg bg-opacity-30  firefox:bg-opacity-90">
       {/* Navbar container */}
       <div className="flex justify-between items-center px-4 py-3 md:px-10 md:py-4">
         {/* Brand */}

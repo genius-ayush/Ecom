@@ -11,9 +11,10 @@ import Profile from './Components/Profile';
 import { useEffect, useState } from 'react';
 
 function App() {
-  type Team = "mi" | "csk" | "rcb" | "kkr" | "dc" | "srh" | "rr" | "lsg" | "gt" | "pxi";
+  type Team = "mi" | "csk" | "rcb" | "kkr" | "dc" | "srh" | "rr" | "lsg" | "gt" | "pxi" | "default";
 
   const teamClasses: Record<Team, string> = {
+    default: "",
     mi: "bg-mi-primary",
     csk: "bg-csk-primary",
     rcb: "bg-rcb-primary",
@@ -26,27 +27,19 @@ function App() {
     pxi: "bg-pxi-primary",
   };
 
-  // State for the current team
   const [team, setTeam] = useState<Team>(() => {
-    // Initialize from localStorage or default to "mi"
     const storedTeam = localStorage.getItem("team") as Team | null;
-    return storedTeam && storedTeam in teamClasses ? storedTeam : "mi";
+    return storedTeam && storedTeam in teamClasses ? storedTeam : "default";
   });
 
-  const token = localStorage.getItem("token") ; 
+  const token = localStorage.getItem("token");
 
-  // Effect to sync `team` with localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("team", team);
-    console.log("rendered inside useeffect")
-  }, [team , token]);
+  }, [team, token]);
 
- 
-
-  // Compute the CSS class for the current team
   const teamClass = teamClasses[team];
 
-  // Example handler to change the team
   const handleTeamChange = (newTeam: Team) => {
     setTeam(newTeam);
   };
@@ -56,7 +49,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-        <Route path='/' element={<Landing />} />
+          <Route path='/' element={<Landing />} />
           <Route path='/landing' element={<Landing />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/register' element={<Register />} />
@@ -68,15 +61,14 @@ function App() {
         <Footer />
       </Router>
 
-      {/* Example UI for changing team */}
       <div className="p-4">
-        <h1>Select Team:</h1>
-        <div className="flex gap-2">
+        <h1 className="text-lg font-bold text-center md:text-2xl lg:text-3xl">Select Team:</h1>
+        <div className="flex flex-wrap justify-center gap-2 mt-4">
           {Object.keys(teamClasses).map((teamKey) => (
             <button
               key={teamKey}
               onClick={() => handleTeamChange(teamKey as Team)}
-              className="px-4 py-2 border rounded"
+              className="px-4 py-2 text-sm font-medium text-white bg-blue-500 border rounded md:px-6 md:py-3 lg:text-base hover:bg-blue-700 transition"
             >
               {teamKey.toUpperCase()}
             </button>
