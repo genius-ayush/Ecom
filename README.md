@@ -1,30 +1,68 @@
-# React + TypeScript + Vite
+# E-commerce Platform - Project Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project is a simplified E-commerce platform that assigns users an IPL team upon registration. The website's theme is dynamically personalized based on the user's assigned team, providing a unique and engaging experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo:-
 
-## Expanding the ESLint configuration
+[Screencast from 2024-12-04 22-06-06.webm](https://github.com/user-attachments/assets/570bbc8f-657f-4597-9fa2-5bc93608a8ed)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Features
+- **User Registration**: Assigns an IPL team to users during registration.
+- **Login**: Allows users to access their personalized dashboard.
+- **Dynamic Themes**: Themed dashboards based on the assigned IPL team, including team colors, logos, and welcome messages.
+- **Product Listing**: Displays products styled according to the user's assigned IPL team.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+---
+
+## Technologies Used
+- **Frontend**: React, TailwindCSS
+- **Backend**: Node.js, Express
+- **Database**:  MongoDB
+
+---
+
+## Setup Instructions
+
+### Frontend
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+2. Navigate to the frontend directory:
+```bash
+   cd frontend
 ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+### Backend
+1. Clone the repository.
+2. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Set up the database
+4. Configure environment variables (e.g., database credentials) in a .env file.
+5. Install dependencies:
+  ```bash
+  npm install
+  ```
+6. Start the backend server:
+  ```bash
+  npm start
+  ```
+
+### Conclusion
+
+This project showcases a personalized E-commerce platform where themes are dynamically tailored to each user's assigned IPL team. It combines a responsive frontend, a RESTful backend, and database integration for a complete web application.
+
