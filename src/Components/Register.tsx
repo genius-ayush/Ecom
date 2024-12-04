@@ -16,7 +16,7 @@ function Register() {
 
     try{
 
-      const response = await axios.post("http://localhost:3000/auth/signup" , {
+      const response = await axios.post("https://maskcraft-api.vercel.app/auth/signup" , {
                   username : username ,
                   email : email , 
                   password : password

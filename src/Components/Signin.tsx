@@ -11,7 +11,7 @@ const SignIn: React.FC = () => {
     // Add your form submission logic here
 
     try{
-      const response = await axios.post("http://localhost:3000/auth/login" , {
+      const response = await axios.post("https://maskcraft-api.vercel.app/auth/login" , {
         email : email  , 
         password : password
       }) 
