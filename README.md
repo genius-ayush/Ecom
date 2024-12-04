@@ -7,7 +7,10 @@ This project is a simplified E-commerce platform that assigns users an IPL team 
 
 ## Demo:-
 
-[Screencast from 2024-12-04 22-06-06.webm](https://github.com/user-attachments/assets/570bbc8f-657f-4597-9fa2-5bc93608a8ed)
+
+
+https://github.com/user-attachments/assets/628598f2-8365-4262-b675-1057518ba8ad
+
 
 ---
 
