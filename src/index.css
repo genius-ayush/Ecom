@@ -1,0 +1,24 @@
+/* @import 'node_modules/scroll-carousel/dist/scroll.carousel.min.css'; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll-carousel-viewport {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.scroll-carousel-slider {
+  display: inline-flex;
+  position: relative;
+}
+.sc-slide {
+  display: inline-block;
+  position: relative;
+}
+.sc-slide img,
+.sc-slide video {
+  max-width: fit-content !important;
+}
+
+
